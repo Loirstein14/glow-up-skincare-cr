@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Up | Elegí la paleta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Página temporal de selección de paleta.
+           No forma parte del sitio final: se elimina una vez elegida. */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background: #EDEDED;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px 15px 60px;
+        }
+
+        .intro {
+            max-width: 700px;
+            margin: 0 auto 35px;
+            text-align: center;
+        }
+
+        .intro h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        .opciones {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Tarjeta de cada opción */
+        .opcion {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .opcion-titulo {
+            padding: 14px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .opcion-titulo h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
+        }
+
+        .opcion-titulo .num {
+            background: #333;
+            color: #fff;
+            font-size: 12px;
+            padding: 3px 12px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Muestras de color */
+        .swatches {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .swatch {
+            flex: 1 1 25%;
+            min-width: 120px;
+            padding: 18px 12px;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Mini maqueta que muestra la paleta aplicada */
+        .demo {
+            padding: 0;
+        }
+
+        .demo-nav {
+            padding: 14px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .demo-logo {
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: none;
+            letter-spacing: 1px;
+        }
+
+        .demo-hero {
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .demo-hero h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .demo-hero p {
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .demo-btn {
+            display: inline-block;
+            padding: 9px 26px;
+            border-radius: 50px;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .demo-cards {
+            display: flex;
+            gap: 14px;
+            padding: 22px 20px;
+            flex-wrap: wrap;
+        }
+
+        .demo-card {
+            flex: 1 1 140px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 14px;
+            text-align: center;
+        }
+
+        .demo-card .caja {
+            height: 70px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .demo-card .nombre {
+            font-family: "Playfair Display", serif;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .demo-card .precio {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .demo-footer {
+            padding: 18px 20px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 40px 25px 80px;
+            }
+
+            .intro h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="intro">
+        <h1>Elegí la paleta de Glow Up</h1>
+        <p>Cada bloque muestra los mismos elementos del sitio con colores distintos.
+            Mirá cuál te representa mejor y decinos el número.</p>
+    </div>
+
+    <div class="opciones">
+
+        <!-- OPCION 1: Nude Rosa -->
+        <div class="opcion">
+            <div class="opcion-titulo">
+                <h2>Nude Rosa</h2>
+                <span class="num">OPCIÓN 1</span>
+            </div>
+            <div class="swatches">
+                <div class="swatch" style="background:#B76E79; color:#fff;">#B76E79<br>Rosa nude</div>
+                <div class="swatch" style="background:#D4AF7A; color:#fff;">#D4AF7A<br>Dorado</div>
+                <div class="swatch" style="background:#2B2320; color:#fff;">#2B2320<br>Café oscuro</div>
+                <div class="swatch" style="background:#FAF6F2; color:#2B2320;">#FAF6F2<br>Crema</div>
+            </div>
+            <div class="demo">
+                <div class="demo-nav" style="background:#fff; color:#2B2320;">
+                    <span class="demo-logo">Glow<span style="color:#B76E79;">Up</span></span>
+                    <span>Inicio &nbsp; Productos &nbsp; Contacto</span>
+                </div>
+                <div class="demo-hero" style="background:#FAF6F2;">
+                    <h3 style="color:#2B2320;">Tu piel merece lo mejor</h3>
+                    <p style="color:#B76E79; letter-spacing:2px; text-transform:uppercase;">Skin care & hair care</p>
+                    <a href="#" class="demo-btn" style="background:#B76E79; color:#fff;">Ver productos</a>
+                </div>
+                <div class="demo-cards" style="background:#fff;">
+                    <div class="demo-card">
+                        <div class="caja" style="background:#FAF6F2;"></div>
+                        <div class="nombre">Serum</div>
+                        <div class="precio" style="color:#B76E79;">&cent;12.500</div>
+                    </div>
+                    <div class="demo-card">
+                        <div class="caja" style="background:#FAF6F2;"></div>
+                        <div class="nombre">Protector</div>
+                        <div class="precio" style="color:#B76E79;">&cent;10.950</div>
+                    </div>
+                    <div class="demo-card">
+                        <div class="caja" style="background:#FAF6F2;"></div>
+                        <div class="nombre">Crema</div>
+                        <div class="precio" style="color:#B76E79;">&cent;14.500</div>
+                    </div>
+                </div>
+                <div class="demo-footer" style="background:#2B2320; color:rgba(255,255,255,.7);">
+                    Glow Up &mdash; Todos los derechos reservados
+                </div>
+            </div>
+        </div>
+
+        <!-- OPCION 2: Minimal Blanco y Negro -->
+        <div class="opcion">
+            <div class="opcion-titulo">
+                <h2>Minimal Blanco y Negro</h2>
+                <span class="num">OPCIÓN 2</span>
+            </div>
+            <div class="swatches">
+                <div class="swatch" style="background:#111111; color:#fff;">#111111<br>Negro</div>
+                <div class="swatch" style="background:#E8B4B8; color:#111;">#E8B4B8<br>Rosa pálido</div>
+                <div class="swatch" style="background:#F5F5F5; color:#111;">#F5F5F5<br>Gris claro</div>
+                <div class="swatch" style="background:#FFFFFF; color:#111; border:1px solid #eee;">#FFFFFF<br>Blanco</div>
+            </div>
+            <div class="demo">
+                <div class="demo-nav" style="background:#fff; color:#111;">
+                    <span class="demo-logo">Glow<span style="color:#E8B4B8;">Up</span></span>
+                    <span>Inicio &nbsp; Productos &nbsp; Contacto</span>
+                </div>
+                <div class="demo-hero" style="background:#F5F5F5;">
+                    <h3 style="color:#111;">Tu piel merece lo mejor</h3>
+                    <p style="color:#888; letter-spacing:2px; text-transform:uppercase;">Skin care & hair care</p>
+                    <a href="#" class="demo-btn" style="background:#111; color:#fff;">Ver productos</a>
+                </div>
+                <div class="demo-cards" style="background:#fff;">
+                    <div class="demo-card">
+                        <div class="caja" style="background:#F5F5F5;"></div>
+                        <div class="nombre">Serum</div>
+                        <div class="precio" style="color:#111;">&cent;12.500</div>
+                    </div>
+                    <div class="demo-card">
+                        <div class="caja" style="background:#F5F5F5;"></div>
+                        <div class="nombre">Protector</div>
+                        <div class="precio" style="color:#111;">&cent;10.950</div>
+                    </div>
+                    <div class="demo-card">
+                        <div class="caja" style="background:#F5F5F5;"></div>
+                        <div class="nombre">Crema</div>
+                        <div class="precio" style="color:#111;">&cent;14.500</div>
+                    </div>
+                </div>
+                <div class="demo-footer" style="background:#111; color:rgba(255,255,255,.7);">
+                    Glow Up &mdash; Todos los derechos reservados
+                </div>
+            </div>
+        </div>
+
+        <!-- OPCION 3: Verde Botánico -->
+        <div class="opcion">
+            <div class="opcion-titulo">
+                <h2>Verde Botánico</h2>
+                <span class="num">OPCIÓN 3</span>
+            </div>
+            <div class="swatches">
+                <div class="swatch" style="background:#6B8E6B; color:#fff;">#6B8E6B<br>Verde salvia</div>
+                <div class="swatch" style="background:#C9A227; color:#fff;">#C9A227<br>Mostaza</div>
+                <div class="swatch" style="background:#2F3A2F; color:#fff;">#2F3A2F<br>Verde oscuro</div>
+                <div class="swatch" style="background:#F4F7F2; color:#2F3A2F;">#F4F7F2<br>Verde claro</div>
+            </div>
+            <div class="demo">
+                <div class="demo-nav" style="background:#fff; color:#2F3A2F;">
+                    <span class="demo-logo">Glow<span style="color:#6B8E6B;">Up</span></span>
+                    <span>Inicio &nbsp; Productos &nbsp; Contacto</span>
+                </div>
+                <div class="demo-hero" style="background:#F4F7F2;">
+                    <h3 style="color:#2F3A2F;">Tu piel merece lo mejor</h3>
+                    <p style="color:#6B8E6B; letter-spacing:2px; text-transform:uppercase;">Skin care & hair care</p>
+                    <a href="#" class="demo-btn" style="background:#6B8E6B; color:#fff;">Ver productos</a>
+                </div>
+                <div class="demo-cards" style="background:#fff;">
+                    <div class="demo-card">
+                        <div class="caja" style="background:#F4F7F2;"></div>
+                        <div class="nombre">Serum</div>
+                        <div class="precio" style="color:#6B8E6B;">&cent;12.500</div>
+                    </div>
+                    <div class="demo-card">
+                        <div class="caja" style="background:#F4F7F2;"></div>
+                        <div class="nombre">Protector</div>
+                        <div class="precio" style="color:#6B8E6B;">&cent;10.950</div>
+                    </div>
+                    <div class="demo-card">
+                        <div class="caja" style="background:#F4F7F2;"></div>
+                        <div class="nombre">Crema</div>
+                        <div class="precio" style="color:#6B8E6B;">&cent;14.500</div>
+                    </div>
+                </div>
+                <div class="demo-footer" style="background:#2F3A2F; color:rgba(255,255,255,.7);">
+                    Glow Up &mdash; Todos los derechos reservados
+                </div>
+            </div>
+        </div>
+
+        <!-- OPCION 4: Lavanda Suave -->
+        <div class="opcion">
+            <div class="opcion-titulo">
+                <h2>Lavanda Suave</h2>
+                <span class="num">OPCIÓN 4</span>
+            </div>
+            <div class="swatches">
+                <div class="swatch" style="background:#9B87B5; color:#fff;">#9B87B5<br>Lavanda</div>
+                <div class="swatch" style="background:#E8C4C4; color:#2E2A35;">#E8C4C4<br>Rosa polvo</div>
+                <div class="swatch" style="background:#2E2A35; color:#fff;">#2E2A35<br>Morado oscuro</div>
+                <div class="swatch" style="background:#F8F5FA; color:#2E2A35;">#F8F5FA<br>Lila claro</div>
+            </div>
+            <div class="demo">
+                <div class="demo-nav" style="background:#fff; color:#2E2A35;">
+                    <span class="demo-logo">Glow<span style="color:#9B87B5;">Up</span></span>
+                    <span>Inicio &nbsp; Productos &nbsp; Contacto</span>
+                </div>
+                <div class="demo-hero" style="background:#F8F5FA;">
+                    <h3 style="color:#2E2A35;">Tu piel merece lo mejor</h3>
+                    <p style="color:#9B87B5; letter-spacing:2px; text-transform:uppercase;">Skin care & hair care</p>
+                    <a href="#" class="demo-btn" style="background:#9B87B5; color:#fff;">Ver productos</a>
+                </div>
+                <div class="demo-cards" style="background:#fff;">
+                    <div class="demo-card">
+                        <div class="caja" style="background:#F8F5FA;"></div>
+                        <div class="nombre">Serum</div>
+                        <div class="precio" style="color:#9B87B5;">&cent;12.500</div>
+                    </div>
+                    <div class="demo-card">
+                        <div class="caja" style="background:#F8F5FA;"></div>
+                        <div class="nombre">Protector</div>
+                        <div class="precio" style="color:#9B87B5;">&cent;10.950</div>
+                    </div>
+                    <div class="demo-card">
+                        <div class="caja" style="background:#F8F5FA;"></div>
+                        <div class="nombre">Crema</div>
+                        <div class="precio" style="color:#9B87B5;">&cent;14.500</div>
+                    </div>
+                </div>
+                <div class="demo-footer" style="background:#2E2A35; color:rgba(255,255,255,.7);">
+                    Glow Up &mdash; Todos los derechos reservados
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
