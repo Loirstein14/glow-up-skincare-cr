@@ -1,0 +1,422 @@
+/* ============================================================
+   Glow Up - Skin Care & Hair Care
+   Hoja de estilos principal
+   ISW-512 Diseño de Aplicaciones Web
+
+   METODOLOGIA: Mobile First
+   Los estilos base estan pensados para pantallas pequenas y
+   las media queries usan min-width para ir agrandando.
+   ============================================================ */
+
+
+/* INICIO Variables de marca */
+:root {
+    /* Paleta principal */
+    --gu-primary: #B76E79;      /* rosa nude, color de marca */
+    --gu-secondary: #D4AF7A;    /* dorado suave, acentos */
+    --gu-dark: #2B2320;         /* café muy oscuro, textos y footer */
+    --gu-light: #FAF6F2;        /* crema, fondos alternos */
+    --gu-text: #4A4038;         /* texto de párrafos */
+    --gu-white: #FFFFFF;
+
+    /* Tipografías */
+    --gu-font-titulo: "Playfair Display", Georgia, serif;
+    --gu-font-texto: "Poppins", "Open Sans", Arial, sans-serif;
+}
+
+/* FIN Variables de marca */
+
+
+/* INICIO Estilos generales */
+body {
+    font-family: var(--gu-font-texto);
+    color: var(--gu-text);
+    background-color: var(--gu-white);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--gu-font-titulo);
+    color: var(--gu-dark);
+    font-weight: 600;
+}
+
+a {
+    color: var(--gu-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--gu-secondary);
+}
+
+/* Botón principal de la marca */
+.gu-btn {
+    display: inline-block;
+    background-color: var(--gu-primary);
+    color: var(--gu-white);
+    border: 1px solid var(--gu-primary);
+    padding: 10px 28px;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+.gu-btn:hover {
+    background-color: var(--gu-dark);
+    border-color: var(--gu-dark);
+    color: var(--gu-white);
+}
+
+/* Botón secundario (contorno) */
+.gu-btn-outline {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--gu-dark);
+    border: 1px solid var(--gu-dark);
+    padding: 10px 28px;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+.gu-btn-outline:hover {
+    background-color: var(--gu-dark);
+    color: var(--gu-white);
+}
+
+/* Encabezado de sección reutilizable */
+.gu-section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gu-section-header h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.gu-section-header p {
+    color: var(--gu-primary);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Fondo alterno para separar secciones */
+.gu-bg-light {
+    background-color: var(--gu-light);
+}
+
+/* Espaciado vertical estándar de sección */
+.gu-section {
+    padding: 45px 0;
+}
+
+/* FIN Estilos generales */
+
+
+/* INICIO Barra de anuncios superior */
+#gu-topbar {
+    background-color: var(--gu-dark);
+    color: var(--gu-white);
+    font-size: 12px;
+    text-align: center;
+    padding: 7px 15px;
+    letter-spacing: 0.5px;
+}
+
+#gu-topbar a {
+    color: var(--gu-secondary);
+}
+
+/* FIN Barra de anuncios superior */
+
+
+/* INICIO Barra de navegación */
+#gu-navbar {
+    background-color: var(--gu-white);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 12px 0;
+}
+
+/* Logo de texto: se reemplaza por <img> cuando esté el logo real */
+#gu-navbar .gu-logo {
+    font-family: var(--gu-font-titulo);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gu-dark);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+#gu-navbar .gu-logo span {
+    color: var(--gu-primary);
+}
+
+#gu-navbar .nav-link {
+    color: var(--gu-dark);
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 0;
+    position: relative;
+}
+
+/* Efecto interactivo al pasar el mouse (requisito del enunciado) */
+#gu-navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--gu-primary);
+    transition: width 0.3s;
+}
+
+#gu-navbar .nav-link:hover::after,
+#gu-navbar .nav-link.active::after {
+    width: 100%;
+}
+
+#gu-navbar .nav-link:hover,
+#gu-navbar .nav-link.active {
+    color: var(--gu-primary);
+}
+
+#gu-navbar .dropdown-menu {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+}
+
+#gu-navbar .dropdown-item {
+    color: var(--gu-dark);
+    padding: 8px 20px;
+}
+
+#gu-navbar .dropdown-item:hover {
+    background-color: var(--gu-light);
+    color: var(--gu-primary);
+}
+
+#gu-navbar .navbar-toggler {
+    border-color: var(--gu-primary);
+    padding: 4px 8px;
+}
+
+#gu-navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* FIN Barra de navegación */
+
+
+/* INICIO Encabezado interno de páginas */
+#gu-page-header {
+    background-color: var(--gu-light);
+    padding: 35px 0;
+    text-align: center;
+}
+
+#gu-page-header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+#gu-page-header p {
+    color: var(--gu-primary);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* FIN Encabezado interno de páginas */
+
+
+/* INICIO Barra de redes sociales y WhatsApp */
+#gu-social {
+    background-color: var(--gu-dark);
+    color: var(--gu-white);
+    padding: 22px 0;
+    text-align: center;
+}
+
+#gu-social .gu-social-texto {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+}
+
+#gu-social .gu-social-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: var(--gu-primary);
+    color: var(--gu-white);
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+#gu-social .gu-social-icono:hover {
+    background-color: var(--gu-secondary);
+    transform: translateY(-3px);
+}
+
+/* Botón directo a WhatsApp */
+#gu-social .gu-whatsapp {
+    background-color: #25D366;
+}
+
+#gu-social .gu-whatsapp:hover {
+    background-color: #1EAE55;
+}
+
+/* FIN Barra de redes sociales y WhatsApp */
+
+
+/* INICIO Footer */
+#gu-footer {
+    background-color: var(--gu-dark);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 40px 0 0 0;
+    font-size: 14px;
+}
+
+#gu-footer h3 {
+    font-size: 22px;
+    color: var(--gu-white);
+    margin-bottom: 14px;
+}
+
+#gu-footer h3 span {
+    color: var(--gu-primary);
+}
+
+#gu-footer h4 {
+    font-size: 14px;
+    color: var(--gu-white);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+}
+
+#gu-footer .gu-footer-col {
+    margin-bottom: 30px;
+}
+
+#gu-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#gu-footer ul li {
+    margin-bottom: 9px;
+}
+
+#gu-footer a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#gu-footer a:hover {
+    color: var(--gu-primary);
+}
+
+#gu-footer i {
+    color: var(--gu-primary);
+    margin-right: 8px;
+}
+
+/* Franja inferior con los derechos de autor */
+#gu-footer .gu-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 10px;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* FIN Footer */
+
+
+/* ============================================================
+   MEDIA QUERIES - Mobile First (se usa min-width)
+   ============================================================ */
+
+/* INICIO Tablet: 768px en adelante */
+@media (min-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .gu-section {
+        padding: 60px 0;
+    }
+
+    .gu-section-header h2 {
+        font-size: 32px;
+    }
+
+    #gu-page-header {
+        padding: 50px 0;
+    }
+
+    #gu-page-header h1 {
+        font-size: 38px;
+    }
+
+    #gu-social {
+        text-align: left;
+    }
+
+    #gu-social .gu-social-texto {
+        margin-bottom: 0;
+    }
+}
+
+/* FIN Tablet */
+
+
+/* INICIO Escritorio: 992px en adelante */
+@media (min-width: 992px) {
+
+    #gu-navbar .nav-link {
+        margin-left: 22px;
+    }
+
+    .gu-section {
+        padding: 75px 0;
+    }
+
+    .gu-section-header h2 {
+        font-size: 36px;
+    }
+
+    #gu-page-header h1 {
+        font-size: 44px;
+    }
+}
+
+/* FIN Escritorio */
