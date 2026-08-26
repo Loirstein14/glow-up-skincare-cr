@@ -1944,3 +1944,176 @@ a:hover {
 }
 
 /* FIN Media queries de contenido */
+
+
+/* INICIO Aviso del catalogo externo */
+.gu-catalogo-aviso {
+    text-align: center;
+    font-size: 13px;
+    color: var(--gu-secondary);
+    margin: 8px 0 0 0;
+}
+
+.gu-catalogo-aviso a {
+    color: var(--gu-dark);
+    border-bottom: 1px solid var(--gu-dark);
+}
+
+.gu-catalogo-aviso a:hover {
+    color: var(--gu-secondary);
+    border-color: var(--gu-secondary);
+}
+
+/* Separacion entre los dos botones del home */
+#gu-destacados-grid ~ .text-center .gu-btn-outline,
+.text-center .gu-btn-outline + .gu-btn-outline {
+    margin-top: 8px;
+}
+
+@media (min-width: 576px) {
+    .text-center .gu-btn-outline + .gu-btn-outline {
+        margin-top: 0;
+        margin-left: 8px;
+    }
+}
+
+/* FIN Aviso del catalogo externo */
+
+
+/* ============================================================
+   AJUSTE DE LA BARRA DE REDES SOCIALES
+   Los circulos eran pequenos y el icono se perdia sobre el
+   fondo negro. Se agrandan y se refuerza el contraste.
+   ============================================================ */
+
+/* INICIO Barra de redes mejorada */
+#gu-social {
+    padding: 28px 0;
+}
+
+/* Los textos guia se ven en blanco pleno, no en gris */
+#gu-social .gu-social-texto {
+    color: var(--gu-white);
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    margin-bottom: 14px;
+    opacity: 0.85;
+}
+
+/* Circulo mas grande y con borde para separarlo del fondo */
+#gu-social .gu-social-icono {
+    width: 46px;
+    height: 46px;
+    margin: 0 6px 0 0;
+    font-size: 21px;
+    background-color: var(--gu-white);
+    color: #000000;
+    border: 2px solid var(--gu-white);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.12);
+}
+
+/* Al pasar el mouse se invierte: fondo negro y borde blanco */
+#gu-social .gu-social-icono:hover {
+    background-color: transparent;
+    color: var(--gu-white);
+    border-color: var(--gu-white);
+    transform: translateY(-3px);
+}
+
+/* WhatsApp mantiene su verde de marca, con borde para destacarlo */
+#gu-social .gu-whatsapp {
+    background-color: #25D366;
+    border-color: #25D366;
+    color: var(--gu-white);
+}
+
+#gu-social .gu-whatsapp:hover {
+    background-color: transparent;
+    border-color: #25D366;
+    color: #25D366;
+}
+
+/* En pantallas grandes los iconos crecen un poco mas */
+@media (min-width: 768px) {
+
+    #gu-social {
+        padding: 32px 0;
+    }
+
+    #gu-social .gu-social-icono {
+        width: 50px;
+        height: 50px;
+        font-size: 23px;
+        margin: 0 8px 0 0;
+    }
+
+    /* Los de la derecha se alinean al borde */
+    #gu-social .text-md-end .gu-social-icono {
+        margin: 0 0 0 8px;
+    }
+}
+
+/* FIN Barra de redes mejorada */
+
+
+/* ============================================================
+   CORRECCION DE CONTRASTE EN EL FOOTER
+
+   Los iconos de la lista de contacto usaban --gu-primary, que
+   con la paleta blanco y negro paso a ser negro. Sobre el fondo
+   negro del footer quedaban invisibles.
+   ============================================================ */
+
+/* INICIO Iconos del footer */
+#gu-footer i {
+    color: var(--gu-white);
+    opacity: 0.85;
+    margin-right: 10px;
+    font-size: 15px;
+    width: 18px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Al pasar sobre el enlace, el icono acompana el resaltado */
+#gu-footer li:hover i {
+    opacity: 1;
+}
+
+/* Los enlaces del footer tambien ganan contraste */
+#gu-footer a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#gu-footer a:hover {
+    color: var(--gu-white);
+    text-decoration: underline;
+}
+
+/* Alinea el icono con el texto cuando la linea se parte en dos */
+#gu-footer .gu-footer-col li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    line-height: 1.6;
+}
+
+/* FIN Iconos del footer */
+
+
+/* INICIO Ajuste para varios videos */
+.gu-video-grid .gu-video-caja {
+    max-width: 100%;
+}
+
+.gu-nosotros-video {
+    border-radius: 12px;
+}
+
+/* El poster se ajusta sin deformarse */
+.gu-video {
+    object-fit: cover;
+    max-height: 460px;
+}
+
+/* FIN Ajuste para varios videos */

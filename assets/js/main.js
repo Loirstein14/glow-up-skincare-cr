@@ -7,11 +7,11 @@
 /* Datos de contacto centralizados.
    Al cambiarlos aquí se actualizan en todas las páginas. */
 var CONTACTO = {
-    whatsapp: "50689678911",              // TODO: número real (formato 506XXXXXXXX)
-    instagram: "https://www.instagram.com/glowupskinhair",   // TODO: perfil real
-    facebook: "https://www.facebook.com/",     // TODO: perfil real
-    tiktok: "https://www.tiktok.com/",         // TODO: perfil real
-    correo: "info@glowup.cr",             // TODO: correo real
+    whatsapp: "50689678911",
+    telefono: "+506 8967 8911",
+    catalogo: "https://wa.me/c/50689678911",
+    instagram: "https://www.instagram.com/glowupskinhair",
+    correo: "glowupskin60@gmail.com",   // TODO: confirmar el correo real del negocio
     mensaje: "Hola Glow Up, me gustaría más información sobre sus productos."
 };
 
@@ -26,10 +26,13 @@ function armarEnlaceWhatsApp() {
 /* Coloca los enlaces de redes sociales en la barra correspondiente */
 function cargarRedesSociales() {
     $(".gu-link-whatsapp").attr("href", armarEnlaceWhatsApp());
+    $(".gu-link-catalogo").attr("href", CONTACTO.catalogo);
     $(".gu-link-instagram").attr("href", CONTACTO.instagram);
-    $(".gu-link-facebook").attr("href", CONTACTO.facebook);
-    $(".gu-link-tiktok").attr("href", CONTACTO.tiktok);
     $(".gu-link-correo").attr("href", "mailto:" + CONTACTO.correo);
+
+    // Textos que muestran los datos de contacto
+    $(".gu-dato-telefono").text(CONTACTO.telefono);
+    $(".gu-dato-correo").text(CONTACTO.correo);
 }
 
 

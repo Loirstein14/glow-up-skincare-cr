@@ -107,7 +107,7 @@
         {
             "id": 9,
             "nombre": "Retinol Serum",
-            "marca": "The Ordinary",
+            "marca": "INKEY",
             "categoria": "skincare",
             "paso": "serum",
             "tipoPiel": "Piel madura",
@@ -198,7 +198,7 @@
         {
             "id": 16,
             "nombre": "Omega Water Cream",
-            "marca": "Glow Up",
+            "marca": "INKEY",
             "categoria": "skincare",
             "paso": "hidratacion",
             "tipoPiel": "Piel grasa",
@@ -211,7 +211,7 @@
         {
             "id": 17,
             "nombre": "Bloqueador Solar + Hidratante",
-            "marca": "Glow Up",
+            "marca": "INKEY",
             "categoria": "skincare",
             "paso": "proteccion",
             "tipoPiel": "Todo tipo de piel",
@@ -224,7 +224,7 @@
         {
             "id": 18,
             "nombre": "Caffeine Eye Cream",
-            "marca": "Glow Up",
+            "marca": "INKEY",
             "categoria": "skincare",
             "paso": "contorno",
             "tipoPiel": "Todo tipo de piel",
@@ -341,7 +341,7 @@
         {
             "id": 27,
             "nombre": "Mascarilla Nocturna de Labios",
-            "marca": "Laneige",
+            "marca": "Sephora",
             "categoria": "labios",
             "paso": "tratamiento",
             "tipoPiel": "Labios secos",
