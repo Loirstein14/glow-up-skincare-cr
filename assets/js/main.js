@@ -7,8 +7,8 @@
 /* Datos de contacto centralizados.
    Al cambiarlos aquí se actualizan en todas las páginas. */
 var CONTACTO = {
-    whatsapp: "50600000000",              // TODO: número real (formato 506XXXXXXXX)
-    instagram: "https://www.instagram.com/",   // TODO: perfil real
+    whatsapp: "50689678911",              // TODO: número real (formato 506XXXXXXXX)
+    instagram: "https://www.instagram.com/glowupskinhair",   // TODO: perfil real
     facebook: "https://www.facebook.com/",     // TODO: perfil real
     tiktok: "https://www.tiktok.com/",         // TODO: perfil real
     correo: "info@glowup.cr",             // TODO: correo real
