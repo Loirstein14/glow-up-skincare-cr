@@ -6,11 +6,11 @@
    ============================================================ */
 
 
-/* TODO: pegar aqui la API KEY de Google Maps (empieza con AIza...) */
+/* API KEY de Google Maps */
 var API_KEY_MAPS = "AIzaSyC9n-3aw89zeTvKHdyBTSbx4ojO731AYNg";
 
 
-/* TODO: reemplazar por la ubicacion real del punto de entrega */
+/* Ubicacion real del punto de entrega */
 var TIENDA = {
     lat: 9.99412316830603,
     lng: -84.11022464069269,
@@ -62,7 +62,7 @@ function ocultarAviso() {
    Construccion del mapa
    ------------------------------------------------------------ */
 
-/* Esta funcion la llama Google cuando termina de cargar su libreria */
+/* Llama Google cuando termina de cargar su libreria */
 function iniciarMapa() {
 
     mapa = new google.maps.Map(document.getElementById("gu-mapa"), {
@@ -103,8 +103,7 @@ function iniciarMapa() {
 }
 
 
-/* Carga la libreria de Google Maps agregando su script a la pagina.
-   Se hace desde JavaScript para que la llave quede en un solo archivo. */
+/* Carga la libreria de Google Maps agregando su script a la pagina. */
 function cargarGoogleMaps() {
 
     if (API_KEY_MAPS.indexOf("PEGAR_AQUI") === 0) {
@@ -170,7 +169,7 @@ function ubicarYTrazar() {
 }
 
 
-/* Coloca (o mueve) el marcador del visitante */
+/* Coloca o mueve el marcador del visitante */
 function colocarMarcadorUsuario() {
 
     if (marcadorUsuario !== null) {
@@ -252,7 +251,7 @@ $(document).ready(function () {
         ubicarYTrazar();
     });
 
-    // Cambio de medio de transporte: recalcula la ruta si ya hay ubicacion
+    // Cambio de medio de transporte recalcula la ruta si ya hay ubicacion
     $(".gu-modo-btn").click(function () {
         $(".gu-modo-btn").removeClass("activo");
         $(this).addClass("activo");

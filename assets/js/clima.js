@@ -5,14 +5,13 @@
    recomienda qué tipo de textura y cuidado usar ese día.
    ============================================================ */
 
-/* TODO: pegar aquí la API KEY de openweathermap.org */
+/*  API KEY de openweathermap.org */
 var API_KEY_CLIMA = "f2ec8064ce8f81b8e60b3fe40d73d733";
 
 /* Endpoint del servicio Current Weather Data */
 var URL_CLIMA = "https://api.openweathermap.org/data/2.5/weather";
 
-/* Ubicación por defecto: San José, Costa Rica.
-   Se usa al cargar para no pedir permisos apenas entra el usuario. */
+/* Ubicación por defecto: Heredia, Costa Rica. */
 var CIUDAD_DEFECTO = { lat: 9.93, lon: -84.08 };
 
 

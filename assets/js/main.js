@@ -11,7 +11,7 @@ var CONTACTO = {
     telefono: "+506 8967 8911",
     catalogo: "https://wa.me/c/50689678911",
     instagram: "https://www.instagram.com/glowupskinhair",
-    correo: "glowupskin60@gmail.com",   // TODO: confirmar el correo real del negocio
+    correo: "glowupskin60@gmail.com", 
     mensaje: "Hola Glow Up, me gustaría más información sobre sus productos."
 };
 

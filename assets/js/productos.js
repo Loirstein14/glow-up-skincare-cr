@@ -18,7 +18,7 @@ var filtroTexto = "";
 var filtroOrden = "nombre";
 
 
-/* Da formato de colones: 12500 -> ¢12.500 */
+/* Formato de colones */
 function formatoColones(monto) {
     return "\u20A1" + monto.toLocaleString("es-CR");
 }
