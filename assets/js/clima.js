@@ -6,7 +6,7 @@
    ============================================================ */
 
 /* TODO: pegar aquí la API KEY de openweathermap.org */
-var API_KEY_CLIMA = "AIzaSyAuibMb4C6Yl-Z9accErq8I42JjlFZFlPg";
+var API_KEY_CLIMA = "f2ec8064ce8f81b8e60b3fe40d73d733";
 
 /* Endpoint del servicio Current Weather Data */
 var URL_CLIMA = "https://api.openweathermap.org/data/2.5/weather";
