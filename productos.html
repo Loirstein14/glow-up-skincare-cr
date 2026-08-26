@@ -8,6 +8,9 @@
     <meta name="description" content="Glow Up, tienda de skin care y hair care en Costa Rica.">
     <meta name="keywords" content="skincare, haircare, cuidado de la piel, Costa Rica">
 
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +41,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="index.html">
-                <h1 class="gu-logo">Glow<span>Up</span></h1>
+                <img src="assets/img/logo-negro.png" alt="Glow Up Skin &amp; Hair Care" class="gu-logo-img">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -103,15 +106,106 @@
     </header>
     <!-- FIN Encabezado de la página -->
 
-    <!-- INICIO Contenido de la página -->
+    <!-- INICIO Contenido de la pagina -->
     <main>
-        <section class="gu-section">
+
+        <!-- INICIO Barra de filtros -->
+        <section class="gu-section pb-0">
             <div class="container">
-                <p class="text-center">Contenido pendiente de desarrollar.</p>
+
+                <div id="gu-filtros">
+
+                    <!-- Filtros por categoria -->
+                    <div class="gu-filtro-grupo">
+                        <button type="button" class="gu-filtro-btn activo" data-categoria="todos">Todos</button>
+                        <button type="button" class="gu-filtro-btn" data-categoria="skincare">Skin Care</button>
+                        <button type="button" class="gu-filtro-btn" data-categoria="haircare">Hair Care</button>
+                        <button type="button" class="gu-filtro-btn" data-categoria="labios">Labios</button>
+                    </div>
+
+                    <!-- Buscador y ordenamiento -->
+                    <div class="row g-2 mt-3">
+
+                        <div class="col-12 col-md-6">
+                            <label for="gu-buscador" class="visually-hidden">Buscar producto</label>
+                            <input type="search" id="gu-buscador" class="form-control"
+                                placeholder="Buscar por nombre, marca o tipo de piel...">
+                        </div>
+
+                        <div class="col-8 col-md-4">
+                            <label for="gu-orden" class="visually-hidden">Ordenar por</label>
+                            <select id="gu-orden" class="form-select">
+                                <option value="nombre">Ordenar: A - Z</option>
+                                <option value="precio-asc">Precio: menor a mayor</option>
+                                <option value="precio-desc">Precio: mayor a menor</option>
+                            </select>
+                        </div>
+
+                        <div class="col-4 col-md-2">
+                            <button type="button" id="gu-limpiar" class="btn w-100 gu-btn-limpiar">Limpiar</button>
+                        </div>
+
+                    </div>
+
+                    <p id="gu-contador" class="gu-contador">Cargando...</p>
+
+                </div>
+
             </div>
         </section>
+        <!-- FIN Barra de filtros -->
+
+
+        <!-- INICIO Grilla del catalogo -->
+        <section class="gu-section pt-3">
+            <div class="container">
+                <div id="gu-catalogo-grid" class="row gu-productos-grid">
+                    <p class="text-center w-100 py-4">Cargando catalogo...</p>
+                </div>
+            </div>
+        </section>
+        <!-- FIN Grilla del catalogo -->
+
+
+        <!-- INICIO Ventana con el detalle del producto -->
+        <div class="modal fade" id="gu-modal-producto" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <span id="gu-modal-marca" class="gu-product-marca"></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+
+                            <div class="col-md-5 text-center">
+                                <img id="gu-modal-img" src="" alt="" class="img-fluid gu-modal-img">
+                            </div>
+
+                            <div class="col-md-7 mt-3 mt-md-0">
+                                <h2 id="gu-modal-nombre" class="gu-modal-nombre"></h2>
+                                <p class="mb-2">
+                                    <span id="gu-modal-precio" class="gu-modal-precio"></span>
+                                    <span id="gu-modal-tipo" class="gu-modal-tipo"></span>
+                                </p>
+                                <p id="gu-modal-detalle" class="gu-modal-detalle"></p>
+                                <a href="#" id="gu-modal-whatsapp" class="gu-btn" target="_blank">
+                                    <i class="bi bi-whatsapp"></i> Consultar por WhatsApp
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- FIN Ventana con el detalle del producto -->
+
     </main>
-    <!-- FIN Contenido de la página -->
+    <!-- FIN Contenido de la pagina -->
 
     <!-- INICIO Barra de redes sociales y WhatsApp -->
     <section id="gu-social">
@@ -150,7 +244,7 @@
             <div class="row">
 
                 <div class="col-md-6 col-lg-3 gu-footer-col">
-                    <h3>Glow<span>Up</span></h3>
+                    <img src="assets/img/logo-blanco.png" alt="Glow Up Skin &amp; Hair Care" class="gu-logo-footer">
                     <p>Skin care y hair care seleccionado con cariño para que tu rutina sea simple, efectiva y disfrutable.</p>
                 </div>
 

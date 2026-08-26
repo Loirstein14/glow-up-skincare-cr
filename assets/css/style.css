@@ -11,12 +11,12 @@
 
 /* INICIO Variables de marca */
 :root {
-    /* Paleta principal */
-    --gu-primary: #B76E79;      /* rosa nude, color de marca */
-    --gu-secondary: #D4AF7A;    /* dorado suave, acentos */
-    --gu-dark: #2B2320;         /* café muy oscuro, textos y footer */
-    --gu-light: #FAF6F2;        /* crema, fondos alternos */
-    --gu-text: #4A4038;         /* texto de párrafos */
+    /* Paleta principal: blanco y negro, acorde con el logo */
+    --gu-primary: #111111;      /* negro, color de marca y acentos */
+    --gu-secondary: #8A8A8A;    /* gris medio, textos secundarios */
+    --gu-dark: #000000;         /* negro puro, footer y barra superior */
+    --gu-light: #F4F4F4;        /* gris muy claro, fondos alternos */
+    --gu-text: #4A4A4A;         /* texto de párrafos */
     --gu-white: #FFFFFF;
 
     /* Tipografías */
@@ -420,3 +420,651 @@ a:hover {
 }
 
 /* FIN Escritorio */
+
+
+/* ============================================================
+   ESTILOS DE LA PAGINA DE INICIO
+   ============================================================ */
+
+/* INICIO Carrusel principal */
+#gu-carousel .carousel-item {
+    height: 380px;
+    background-color: var(--gu-light);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Capa oscura para que el texto se lea sobre la imagen */
+#gu-carousel .gu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(43, 35, 32, 0.35);
+}
+
+#gu-carousel .carousel-caption {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8%;
+    left: 8%;
+    text-align: center;
+}
+
+#gu-carousel .carousel-caption h2 {
+    color: var(--gu-white);
+    font-size: 26px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#gu-carousel .carousel-caption p {
+    color: var(--gu-white);
+    font-size: 14px;
+    margin-bottom: 18px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* FIN Carrusel principal */
+
+
+/* INICIO Tira de beneficios */
+#gu-beneficios {
+    background-color: var(--gu-light);
+    padding: 30px 0;
+}
+
+#gu-beneficios .gu-beneficio {
+    text-align: center;
+    padding: 14px 10px;
+}
+
+#gu-beneficios .gu-beneficio i {
+    font-size: 28px;
+    color: var(--gu-primary);
+    display: block;
+    margin-bottom: 8px;
+}
+
+#gu-beneficios .gu-beneficio h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+#gu-beneficios .gu-beneficio p {
+    font-size: 13px;
+    margin: 0;
+}
+
+/* FIN Tira de beneficios */
+
+
+/* INICIO Panel del clima (API Rest externa) */
+#gu-clima .gu-clima-caja {
+    background-color: var(--gu-white);
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+#gu-clima .gu-clima-dato {
+    text-align: center;
+}
+
+#gu-clima #gu-clima-temp {
+    font-family: var(--gu-font-titulo);
+    font-size: 40px;
+    color: var(--gu-dark);
+    display: block;
+    line-height: 1.1;
+}
+
+#gu-clima #gu-clima-lugar {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gu-primary);
+    display: block;
+}
+
+#gu-clima #gu-clima-desc {
+    font-size: 13px;
+    text-transform: capitalize;
+    display: block;
+}
+
+#gu-clima .gu-clima-reco {
+    border-top: 1px solid #eee;
+    margin-top: 18px;
+    padding-top: 18px;
+}
+
+#gu-clima .gu-clima-reco i {
+    font-size: 26px;
+    color: var(--gu-secondary);
+}
+
+#gu-clima .gu-clima-reco h3 {
+    font-size: 18px;
+    margin: 6px 0;
+}
+
+#gu-clima .gu-clima-reco p {
+    font-size: 14px;
+    margin: 0;
+}
+
+#gu-clima .gu-clima-link {
+    font-size: 12px;
+    background: none;
+    border: none;
+    color: var(--gu-primary);
+    text-decoration: underline;
+    padding: 0;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+/* FIN Panel del clima */
+
+
+/* INICIO Tarjetas de producto */
+.gu-productos-grid {
+    margin-top: 10px;
+}
+
+.gu-product-card {
+    background-color: var(--gu-white);
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 24px;
+}
+
+.gu-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.gu-product-img {
+    background-color: var(--gu-light);
+}
+
+.gu-product-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gu-product-body {
+    padding: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.gu-product-marca {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gu-secondary);
+}
+
+.gu-product-nombre {
+    font-size: 15px;
+    margin: 6px 0;
+}
+
+.gu-product-desc {
+    font-size: 13px;
+    color: #7a7069;
+    flex-grow: 1;
+    margin-bottom: 8px;
+}
+
+.gu-product-precio {
+    font-weight: 600;
+    color: var(--gu-primary);
+    font-size: 16px;
+}
+
+/* FIN Tarjetas de producto */
+
+
+/* INICIO Paneles de la rutina */
+#gu-pasos .gu-paso {
+    background-color: var(--gu-white);
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 22px 18px;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#gu-pasos .gu-paso-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--gu-primary);
+    color: var(--gu-white);
+    font-family: var(--gu-font-titulo);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+#gu-pasos .gu-paso h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+#gu-pasos .gu-paso p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* FIN Paneles de la rutina */
+
+
+/* INICIO Llamado a la accion */
+#gu-cta {
+    background-color: var(--gu-primary);
+    color: var(--gu-white);
+    text-align: center;
+    padding: 45px 0;
+}
+
+#gu-cta h2 {
+    color: var(--gu-white);
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+#gu-cta p {
+    margin-bottom: 20px;
+}
+
+#gu-cta .gu-btn-cta {
+    display: inline-block;
+    background-color: var(--gu-white);
+    color: var(--gu-primary);
+    padding: 11px 32px;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+#gu-cta .gu-btn-cta:hover {
+    background-color: var(--gu-dark);
+    color: var(--gu-white);
+}
+
+/* FIN Llamado a la accion */
+
+
+/* INICIO Media queries del inicio - Mobile First */
+@media (min-width: 768px) {
+
+    #gu-carousel .carousel-item {
+        height: 480px;
+    }
+
+    #gu-carousel .carousel-caption {
+        text-align: left;
+        right: 45%;
+        left: 8%;
+    }
+
+    #gu-carousel .carousel-caption h2 {
+        font-size: 40px;
+    }
+
+    #gu-carousel .carousel-caption p {
+        font-size: 16px;
+    }
+
+    #gu-clima .gu-clima-caja {
+        padding: 32px 30px;
+    }
+
+    #gu-clima .gu-clima-reco {
+        border-top: none;
+        border-left: 1px solid #eee;
+        margin-top: 0;
+        padding-top: 0;
+        padding-left: 25px;
+        text-align: left;
+    }
+
+    #gu-cta h2 {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    #gu-carousel .carousel-item {
+        height: 560px;
+    }
+
+    #gu-carousel .carousel-caption h2 {
+        font-size: 48px;
+    }
+}
+
+/* FIN Media queries del inicio */
+
+
+/* INICIO Logo en imagen */
+#gu-navbar .gu-logo-img {
+    height: 42px;
+    width: auto;
+    display: block;
+}
+
+#gu-footer .gu-logo-footer {
+    height: 50px;
+    width: auto;
+    margin-bottom: 14px;
+    border-radius: 6px;
+}
+
+@media (min-width: 992px) {
+    #gu-navbar .gu-logo-img {
+        height: 50px;
+    }
+}
+
+/* FIN Logo en imagen */
+
+
+/* INICIO Ajuste del carrusel con imagen de producto */
+#gu-carousel .carousel-item {
+    background-repeat: no-repeat;
+    background-color: var(--gu-light);
+    background-size: contain;
+    background-position: right center;
+}
+
+/* En movil la imagen se centra y el texto queda sobre el degradado */
+#gu-carousel .gu-overlay {
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.96) 0%,
+            rgba(255, 255, 255, 0.85) 45%,
+            rgba(255, 255, 255, 0.15) 100%);
+}
+
+#gu-carousel .carousel-caption h2,
+#gu-carousel .carousel-caption p {
+    color: var(--gu-dark);
+    text-shadow: none;
+}
+
+#gu-carousel .carousel-indicators [data-bs-target] {
+    background-color: var(--gu-primary);
+}
+
+#gu-carousel .carousel-control-prev-icon,
+#gu-carousel .carousel-control-next-icon {
+    filter: invert(1) grayscale(1);
+}
+
+/* FIN Ajuste del carrusel */
+
+
+/* ============================================================
+   ESTILOS DEL CATALOGO DE PRODUCTOS
+   ============================================================ */
+
+/* INICIO Barra de filtros */
+#gu-filtros .gu-filtro-grupo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+#gu-filtros .gu-filtro-btn {
+    background-color: var(--gu-white);
+    border: 1px solid var(--gu-dark);
+    color: var(--gu-dark);
+    padding: 7px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#gu-filtros .gu-filtro-btn:hover {
+    background-color: var(--gu-light);
+}
+
+#gu-filtros .gu-filtro-btn.activo {
+    background-color: var(--gu-primary);
+    border-color: var(--gu-primary);
+    color: var(--gu-white);
+}
+
+#gu-filtros .form-control,
+#gu-filtros .form-select {
+    border-radius: 50px;
+    border-color: #ddd;
+    font-size: 14px;
+    padding: 9px 18px;
+}
+
+#gu-filtros .form-control:focus,
+#gu-filtros .form-select:focus {
+    border-color: var(--gu-primary);
+    box-shadow: none;
+}
+
+#gu-filtros .gu-btn-limpiar {
+    background-color: var(--gu-dark);
+    color: var(--gu-white);
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 9px 10px;
+}
+
+#gu-filtros .gu-btn-limpiar:hover {
+    background-color: var(--gu-primary);
+    color: var(--gu-white);
+}
+
+#gu-filtros .gu-contador {
+    text-align: center;
+    font-size: 13px;
+    color: #8a8078;
+    margin: 16px 0 0 0;
+    letter-spacing: 0.5px;
+}
+
+/* FIN Barra de filtros */
+
+
+/* INICIO Boton de la tarjeta de producto */
+.gu-product-card {
+    cursor: pointer;
+}
+
+.gu-product-btn {
+    background: none;
+    border: none;
+    color: var(--gu-secondary);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 0 0 0;
+    margin-top: 8px;
+    border-top: 1px solid #f0ece8;
+    width: 100%;
+    transition: color 0.3s;
+}
+
+.gu-product-card:hover .gu-product-btn {
+    color: var(--gu-primary);
+}
+
+/* FIN Boton de la tarjeta de producto */
+
+
+/* INICIO Ventana de detalle */
+#gu-modal-producto .modal-content {
+    border: none;
+    border-radius: 12px;
+}
+
+#gu-modal-producto .modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+#gu-modal-producto .gu-modal-img {
+    background-color: var(--gu-light);
+    border-radius: 10px;
+    max-height: 260px;
+}
+
+#gu-modal-producto .gu-modal-nombre {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#gu-modal-producto .gu-modal-precio {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gu-primary);
+    margin-right: 12px;
+}
+
+#gu-modal-producto .gu-modal-tipo {
+    font-size: 12px;
+    background-color: var(--gu-light);
+    color: var(--gu-text);
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+#gu-modal-producto .gu-modal-detalle {
+    font-size: 14px;
+    margin: 14px 0 20px 0;
+}
+
+/* FIN Ventana de detalle */
+
+
+/* ============================================================
+   AJUSTES DE LA PALETA BLANCO Y NEGRO
+   Al quitar el color, el contraste y la tipografia son los que
+   sostienen el diseno, por eso se refuerzan algunos detalles.
+   ============================================================ */
+
+/* INICIO Ajustes blanco y negro */
+
+/* Logos con fondo transparente: en el navbar se usa la version
+   negra y en el footer la blanca, sin necesidad de filtros. */
+#gu-navbar .gu-logo-img {
+    height: 52px;
+}
+
+#gu-footer .gu-logo-footer {
+    height: 90px;
+    border-radius: 0;
+}
+
+/* Al no haber color, el subrayado del menu se hace mas visible */
+#gu-navbar .nav-link::after {
+    height: 2px;
+    background-color: var(--gu-dark);
+}
+
+/* El precio se destaca con peso y espaciado en vez de color */
+.gu-product-precio {
+    letter-spacing: 0.5px;
+}
+
+/* La marca del producto en gris para crear jerarquia */
+.gu-product-marca {
+    color: var(--gu-secondary);
+}
+
+/* Los iconos de beneficios se ven mejor en negro pleno */
+#gu-beneficios .gu-beneficio i {
+    color: var(--gu-dark);
+}
+
+/* Las lineas divisorias se marcan un poco mas */
+.gu-product-card {
+    border-color: #e4e4e4;
+}
+
+/* El boton del llamado a la accion invierte los tonos */
+#gu-cta {
+    background-color: var(--gu-dark);
+}
+
+#gu-cta .gu-btn-cta {
+    background-color: var(--gu-white);
+    color: var(--gu-dark);
+}
+
+#gu-cta .gu-btn-cta:hover {
+    background-color: var(--gu-secondary);
+    color: var(--gu-white);
+}
+
+/* Los circulos de redes sociales pasan a negro sobre el footer */
+#gu-social .gu-social-icono {
+    background-color: var(--gu-white);
+    color: var(--gu-dark);
+}
+
+#gu-social .gu-social-icono:hover {
+    background-color: var(--gu-secondary);
+    color: var(--gu-white);
+}
+
+/* Se conserva el verde de WhatsApp por ser un color de marca
+   reconocible. Para dejarlo en blanco y negro, borrar este bloque. */
+#gu-social .gu-whatsapp {
+    background-color: #25D366;
+    color: var(--gu-white);
+}
+
+#gu-social .gu-whatsapp:hover {
+    background-color: #1EAE55;
+    color: var(--gu-white);
+}
+
+/* FIN Ajustes blanco y negro */
+
+
+/* INICIO Ajuste final del logo circular */
+#gu-navbar {
+    padding: 8px 0;
+}
+
+@media (min-width: 992px) {
+    #gu-navbar .gu-logo-img {
+        height: 62px;
+    }
+}
+
+/* FIN Ajuste final del logo circular */

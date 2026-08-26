@@ -8,6 +8,9 @@
     <meta name="description" content="Glow Up, tienda de skin care y hair care en Costa Rica.">
     <meta name="keywords" content="skincare, haircare, cuidado de la piel, Costa Rica">
 
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +41,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="index.html">
-                <h1 class="gu-logo">Glow<span>Up</span></h1>
+                <img src="assets/img/logo-negro.png" alt="Glow Up Skin &amp; Hair Care" class="gu-logo-img">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -94,19 +97,235 @@
     </nav>
     <!-- FIN Barra de navegación -->
 
+    <!-- INICIO Carrusel principal -->
+    <div id="gu-carousel" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#gu-carousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#gu-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#gu-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active"
+                style="background-image: url('assets/img/soothing-barrier-serum.png');">
+                <div class="gu-overlay"></div>
+                <div class="carousel-caption">
+                    <h2>Tu piel merece lo mejor</h2>
+                    <p>Skin care y hair care seleccionado para vos, con envío a todo el país.</p>
+                    <a href="productos.html" class="gu-btn">Ver productos</a>
+                </div>
+            </div>
+
+            <div class="carousel-item"
+                style="background-image: url('assets/img/niacinamida-zinc.png');">
+                <div class="gu-overlay"></div>
+                <div class="carousel-caption">
+                    <h2>Armá tu rutina paso a paso</h2>
+                    <p>Te guiamos para que sepas qué usar, en qué orden y cada cuánto.</p>
+                    <a href="rutina.html" class="gu-btn">Conocer la rutina</a>
+                </div>
+            </div>
+
+            <div class="carousel-item"
+                style="background-image: url('assets/img/olaplex-3.png');">
+                <div class="gu-overlay"></div>
+                <div class="carousel-caption">
+                    <h2>También cuidamos tu cabello</h2>
+                    <p>Tratamientos y aceites para devolverle fuerza y brillo.</p>
+                    <a href="productos.html" class="gu-btn">Ver hair care</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#gu-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#gu-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+
+    </div>
+    <!-- FIN Carrusel principal -->
+
+
     <!-- INICIO Contenido principal -->
     <main>
 
-        <!-- Aquí van: carrusel, paneles destacados, productos y widget del clima -->
-        <section class="gu-section">
+        <!-- INICIO Tira de beneficios -->
+        <section id="gu-beneficios">
             <div class="container">
-                <div class="gu-section-header">
-                    <p>Bienvenida</p>
-                    <h2>Tu piel merece lo mejor</h2>
+                <div class="row">
+
+                    <div class="col-6 col-lg-3">
+                        <div class="gu-beneficio">
+                            <i class="bi bi-truck"></i>
+                            <h3>Envío gratis</h3>
+                            <p>En compras superiores a &cent;30.000</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="gu-beneficio">
+                            <i class="bi bi-shield-check"></i>
+                            <h3>Producto original</h3>
+                            <p>Marcas verificadas y selladas</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="gu-beneficio">
+                            <i class="bi bi-phone"></i>
+                            <h3>Pagá con SINPE</h3>
+                            <p>SINPE Móvil, efectivo o tarjeta</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="gu-beneficio">
+                            <i class="bi bi-chat-heart"></i>
+                            <h3>Asesoría gratis</h3>
+                            <p>Te ayudamos a elegir por WhatsApp</p>
+                        </div>
+                    </div>
+
                 </div>
-                <p class="text-center">Contenido del home pendiente de desarrollar.</p>
             </div>
         </section>
+        <!-- FIN Tira de beneficios -->
+
+
+        <!-- INICIO Panel del clima (consumo de API Rest externo) -->
+        <section id="gu-clima" class="gu-section">
+            <div class="container">
+
+                <div class="gu-section-header">
+                    <p>Recomendación del día</p>
+                    <h2>¿Qué le conviene hoy a tu piel?</h2>
+                </div>
+
+                <div class="gu-clima-caja">
+
+                    <p id="gu-clima-cargando" class="text-center mb-0">Consultando el clima...</p>
+
+                    <div id="gu-clima-contenido" class="row align-items-center d-none">
+
+                        <div class="col-md-5 gu-clima-dato">
+                            <img id="gu-clima-icono" src="" alt="Estado del tiempo" width="80" height="80"
+                                class="mx-auto d-block">
+                            <span id="gu-clima-temp"></span>
+                            <span id="gu-clima-lugar"></span>
+                            <span id="gu-clima-desc"></span>
+                            <span class="d-block mt-2">Humedad: <strong id="gu-clima-humedad"></strong></span>
+                            <button type="button" id="gu-clima-btn-ubicacion" class="gu-clima-link">
+                                Usar mi ubicación
+                            </button>
+                        </div>
+
+                        <div class="col-md-7 gu-clima-reco mt-4 mt-md-0">
+                            <i id="gu-clima-reco-icono" class="bi bi-stars"></i>
+                            <h3 id="gu-clima-reco-titulo"></h3>
+                            <p id="gu-clima-reco-texto"></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- FIN Panel del clima -->
+
+
+        <!-- INICIO Productos destacados (cargados desde JSON propio) -->
+        <section class="gu-section gu-bg-light">
+            <div class="container">
+
+                <div class="gu-section-header">
+                    <p>Lo más buscado</p>
+                    <h2>Productos destacados</h2>
+                </div>
+
+                <div id="gu-destacados-grid" class="row gu-productos-grid">
+                    <p class="text-center w-100">Cargando productos...</p>
+                </div>
+
+                <div class="text-center">
+                    <a href="productos.html" class="gu-btn-outline">Ver todo el catálogo</a>
+                </div>
+
+            </div>
+        </section>
+        <!-- FIN Productos destacados -->
+
+
+        <!-- INICIO Paneles de la rutina -->
+        <section id="gu-pasos" class="gu-section">
+            <div class="container">
+
+                <div class="gu-section-header">
+                    <p>Fácil de seguir</p>
+                    <h2>Tu rutina en 4 pasos</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="gu-paso">
+                            <span class="gu-paso-num">1</span>
+                            <h3>Limpiá</h3>
+                            <p>Retirá maquillaje, protector solar y residuos del día.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="gu-paso">
+                            <span class="gu-paso-num">2</span>
+                            <h3>Tonificá</h3>
+                            <p>Reequilibrá el pH y preparalá para lo que viene.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="gu-paso">
+                            <span class="gu-paso-num">3</span>
+                            <h3>Tratá</h3>
+                            <p>Aplicá el serum según lo que tu piel necesite.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="gu-paso">
+                            <span class="gu-paso-num">4</span>
+                            <h3>Protegé</h3>
+                            <p>Hidratá y sellá con protector solar todos los días.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-3">
+                    <a href="rutina.html" class="gu-btn-outline">Ver la rutina completa</a>
+                </div>
+
+            </div>
+        </section>
+        <!-- FIN Paneles de la rutina -->
+
+
+        <!-- INICIO Llamado a la accion -->
+        <section id="gu-cta">
+            <div class="container">
+                <h2>¿No sabés por dónde empezar?</h2>
+                <p>Escribinos y te armamos una rutina según tu tipo de piel, sin costo.</p>
+                <a href="#" class="gu-btn-cta gu-link-whatsapp" target="_blank">Pedir asesoría</a>
+            </div>
+        </section>
+        <!-- FIN Llamado a la accion -->
 
     </main>
     <!-- FIN Contenido principal -->
@@ -148,7 +367,7 @@
             <div class="row">
 
                 <div class="col-md-6 col-lg-3 gu-footer-col">
-                    <h3>Glow<span>Up</span></h3>
+                    <img src="assets/img/logo-blanco.png" alt="Glow Up Skin &amp; Hair Care" class="gu-logo-footer">
                     <p>Skin care y hair care seleccionado con cariño para que tu rutina sea simple, efectiva y disfrutable.</p>
                 </div>
 
@@ -196,6 +415,7 @@
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/productos.js"></script>
     <script src="assets/js/clima.js"></script>
     <!-- FIN Scripts -->
 
