@@ -1,0 +1,144 @@
+{
+    "galeria": [
+        {
+            "id": 1,
+            "titulo": "Limpieza profunda",
+            "categoria": "rutina",
+            "imagen": "assets/img/cerave-jabon-seca.png",
+            "epigrafe": "El primer paso de toda rutina: un limpiador acorde a tu tipo de piel."
+        },
+        {
+            "id": 2,
+            "titulo": "Control del acne",
+            "categoria": "rutina",
+            "imagen": "assets/img/cerave-jabon-acne.png",
+            "epigrafe": "Acido salicilico para mantener los poros libres."
+        },
+        {
+            "id": 3,
+            "titulo": "Vitamina C",
+            "categoria": "serums",
+            "imagen": "assets/img/vitamina-c-glucosido.png",
+            "epigrafe": "Luminosidad y tono parejo desde la primera semana."
+        },
+        {
+            "id": 4,
+            "titulo": "Barrera cutanea",
+            "categoria": "serums",
+            "imagen": "assets/img/soothing-barrier-serum.png",
+            "epigrafe": "Ceramidas y niacinamida para calmar la piel irritada."
+        },
+        {
+            "id": 5,
+            "titulo": "Hidratacion profunda",
+            "categoria": "serums",
+            "imagen": "assets/img/acido-hialuronico-b5.png",
+            "epigrafe": "Acido hialuronico con vitamina B5."
+        },
+        {
+            "id": 6,
+            "titulo": "Poros y grasa",
+            "categoria": "serums",
+            "imagen": "assets/img/niacinamida-zinc.png",
+            "epigrafe": "Niacinamida y zinc para equilibrar el sebo."
+        },
+        {
+            "id": 7,
+            "titulo": "Manchas y melasma",
+            "categoria": "serums",
+            "imagen": "assets/img/alpha-arbutin.png",
+            "epigrafe": "Alpha arbutin para unificar el tono."
+        },
+        {
+            "id": 8,
+            "titulo": "Renovacion celular",
+            "categoria": "tratamientos",
+            "imagen": "assets/img/retinol-squalane.png",
+            "epigrafe": "Retinol en escualano, ideal para empezar de noche."
+        },
+        {
+            "id": 9,
+            "titulo": "Exfoliacion semanal",
+            "categoria": "tratamientos",
+            "imagen": "assets/img/aha-bha-peeling.png",
+            "epigrafe": "AHA y BHA para textura y luminosidad."
+        },
+        {
+            "id": 10,
+            "titulo": "Tonico exfoliante",
+            "categoria": "tratamientos",
+            "imagen": "assets/img/acido-glicolico.png",
+            "epigrafe": "Acido glicolico al 7% de uso diario."
+        },
+        {
+            "id": 11,
+            "titulo": "Piel con rosacea",
+            "categoria": "tratamientos",
+            "imagen": "assets/img/acido-azelaico.png",
+            "epigrafe": "Acido azelaico para enrojecimiento e hinchazon."
+        },
+        {
+            "id": 12,
+            "titulo": "Contorno de ojos",
+            "categoria": "tratamientos",
+            "imagen": "assets/img/caffeine-eye-cream.png",
+            "epigrafe": "Cafeina para ojeras y bolsas."
+        },
+        {
+            "id": 13,
+            "titulo": "Hidratacion ligera",
+            "categoria": "rutina",
+            "imagen": "assets/img/omega-water-cream.png",
+            "epigrafe": "Gel de agua que no deja sensacion grasosa."
+        },
+        {
+            "id": 14,
+            "titulo": "Proteccion diaria",
+            "categoria": "rutina",
+            "imagen": "assets/img/bloqueador-hidratante.png",
+            "epigrafe": "El paso que no se puede saltar, todos los dias."
+        },
+        {
+            "id": 15,
+            "titulo": "Reparacion capilar",
+            "categoria": "cabello",
+            "imagen": "assets/img/olaplex-3.png",
+            "epigrafe": "Olaplex N3 antes del lavado, una vez por semana."
+        },
+        {
+            "id": 16,
+            "titulo": "Sin frizz",
+            "categoria": "cabello",
+            "imagen": "assets/img/olaplex-6.png",
+            "epigrafe": "Crema sin enjuague para manejabilidad y brillo."
+        },
+        {
+            "id": 17,
+            "titulo": "Brillo instantaneo",
+            "categoria": "cabello",
+            "imagen": "assets/img/olaplex-7.png",
+            "epigrafe": "Aceite liviano que no apelmaza."
+        },
+        {
+            "id": 18,
+            "titulo": "Cabello danado",
+            "categoria": "cabello",
+            "imagen": "assets/img/k18-hair.png",
+            "epigrafe": "K18 repara en cuatro minutos."
+        },
+        {
+            "id": 19,
+            "titulo": "Antiencrespamiento",
+            "categoria": "cabello",
+            "imagen": "assets/img/wow-dream-coat.png",
+            "epigrafe": "Wow Dream Coat impermeabiliza la hebra."
+        },
+        {
+            "id": 20,
+            "titulo": "Densidad capilar",
+            "categoria": "cabello",
+            "imagen": "assets/img/multipeptide-cabello.png",
+            "epigrafe": "Peptidos para un cabello mas grueso."
+        }
+    ]
+}

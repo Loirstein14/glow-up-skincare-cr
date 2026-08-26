@@ -106,15 +106,169 @@
     </header>
     <!-- FIN Encabezado de la página -->
 
-    <!-- INICIO Contenido de la página -->
+    <!-- INICIO Contenido de la pagina -->
     <main>
+
+        <!-- INICIO Datos de contacto -->
         <section class="gu-section">
             <div class="container">
-                <p class="text-center">Contenido pendiente de desarrollar.</p>
+                <div class="row">
+
+                    <div class="col-lg-5">
+                        <div class="gu-contacto-info">
+                            <h2>Hablemos</h2>
+                            <p>Escribinos y te ayudamos a elegir los productos que mejor le
+                                calzan a tu tipo de piel o de cabello. La asesoria no tiene costo.</p>
+
+                            <ul class="gu-contacto-lista">
+                                <li>
+                                    <i class="bi bi-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                    <a href="#" class="gu-link-whatsapp" target="_blank">Escribinos ahora</a>
+                                </li>
+                                <li>
+                                    <i class="bi bi-envelope"></i>
+                                    <span>Correo</span>
+                                    <a href="#" class="gu-link-correo">Enviar un correo</a>
+                                </li>
+                                <li>
+                                    <i class="bi bi-instagram"></i>
+                                    <span>Instagram</span>
+                                    <a href="#" class="gu-link-instagram" target="_blank">Ver el perfil</a>
+                                </li>
+                                <li>
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>Entregas</span>
+                                    <a href="ubicacion.html">Ver el mapa</a>
+                                </li>
+                                <li>
+                                    <i class="bi bi-clock"></i>
+                                    <span>Horario</span>
+                                    <span class="gu-contacto-dato">Lunes a sabado, 9:00 a 18:00</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- INICIO Formulario de registro -->
+                    <div class="col-lg-7 mt-4 mt-lg-0">
+                        <div class="gu-form-caja">
+
+                            <h2>Registrate</h2>
+                            <p class="gu-form-intro">Completa tus datos y te avisamos de nuevos
+                                productos y promociones.</p>
+
+                            <form id="gu-form-registro" novalidate>
+
+                                <!-- Nombre completo -->
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre completo *</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre"
+                                        placeholder="Nombre y apellido">
+                                    <span class="gu-error" id="error-nombre"></span>
+                                </div>
+
+                                <!-- Correo electronico -->
+                                <div class="mb-3">
+                                    <label for="correo" class="form-label">Correo electronico *</label>
+                                    <input type="email" class="form-control" id="correo" name="correo"
+                                        placeholder="nombre@correo.com">
+                                    <span class="gu-error" id="error-correo"></span>
+                                </div>
+
+                                <div class="row">
+
+                                    <!-- Fecha de nacimiento -->
+                                    <div class="col-md-6 mb-3">
+                                        <label for="fechaNacimiento" class="form-label">Fecha de nacimiento *</label>
+                                        <input type="date" class="form-control" id="fechaNacimiento"
+                                            name="fechaNacimiento">
+                                        <span class="gu-edad-texto" id="gu-edad-texto"></span>
+                                        <span class="gu-error" id="error-fechaNacimiento"></span>
+                                    </div>
+
+                                    <!-- Campo oculto con la edad calculada -->
+                                    <input type="hidden" id="edad" name="edad" value="">
+
+                                    <!-- Rango de ingreso -->
+                                    <div class="col-md-6 mb-3">
+                                        <label for="ingreso" class="form-label">
+                                            Rango de ingreso mensual:
+                                            <strong id="gu-ingreso-valor"></strong>
+                                        </label>
+                                        <input type="range" class="form-range" id="ingreso" name="ingreso"
+                                            min="0" max="2000000" step="50000" value="500000">
+                                    </div>
+
+                                </div>
+
+                                <!-- Genero: seleccion unica -->
+                                <div class="mb-3">
+                                    <span class="form-label d-block">Genero *</span>
+                                    <div id="genero" class="gu-radios">
+                                        <label class="gu-radio">
+                                            <input type="radio" name="genero" value="Femenino"> Femenino
+                                        </label>
+                                        <label class="gu-radio">
+                                            <input type="radio" name="genero" value="Masculino"> Masculino
+                                        </label>
+                                        <label class="gu-radio">
+                                            <input type="radio" name="genero" value="Otro"> Otro
+                                        </label>
+                                        <label class="gu-radio">
+                                            <input type="radio" name="genero" value="Prefiero no decirlo">
+                                            Prefiero no decirlo
+                                        </label>
+                                    </div>
+                                    <span class="gu-error" id="error-genero"></span>
+                                </div>
+
+                                <!-- Grado academico: seleccion multiple -->
+                                <div class="mb-3">
+                                    <label for="gradoAcademico" class="form-label">
+                                        Grado academico * <small>(podes elegir mas de uno)</small>
+                                    </label>
+                                    <select class="form-select" id="gradoAcademico" name="gradoAcademico"
+                                        multiple size="5">
+                                        <option value="Primaria">Primaria</option>
+                                        <option value="Secundaria">Secundaria</option>
+                                        <option value="Tecnico">Tecnico</option>
+                                        <option value="Bachillerato universitario">Bachillerato universitario</option>
+                                        <option value="Licenciatura">Licenciatura</option>
+                                        <option value="Maestria">Maestria</option>
+                                        <option value="Doctorado">Doctorado</option>
+                                    </select>
+                                    <span class="gu-error" id="error-gradoAcademico"></span>
+                                </div>
+
+                                <!-- Comentario opcional -->
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Contanos que buscas
+                                        <small>(opcional)</small></label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="3"
+                                        placeholder="Por ejemplo: tengo piel mixta y busco algo para las manchas"></textarea>
+                                </div>
+
+                                <div id="gu-form-aviso" class="d-none"></div>
+
+                                <div class="gu-form-botones">
+                                    <button type="button" id="gu-btn-enviar" class="gu-btn">Enviar registro</button>
+                                    <button type="button" id="gu-btn-limpiar-form" class="gu-btn-outline">Limpiar</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                    <!-- FIN Formulario de registro -->
+
+                </div>
             </div>
         </section>
+        <!-- FIN Datos de contacto -->
+
     </main>
-    <!-- FIN Contenido de la página -->
+    <!-- FIN Contenido de la pagina -->
 
     <!-- INICIO Barra de redes sociales y WhatsApp -->
     <section id="gu-social">

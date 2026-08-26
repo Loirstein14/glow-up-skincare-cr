@@ -106,15 +106,84 @@
     </header>
     <!-- FIN Encabezado de la página -->
 
-    <!-- INICIO Contenido de la página -->
+    <!-- INICIO Contenido de la pagina -->
     <main>
+
+        <!-- INICIO Video en HTML5 -->
         <section class="gu-section">
             <div class="container">
-                <p class="text-center">Contenido pendiente de desarrollar.</p>
+
+                <div class="gu-section-header">
+                    <p>En movimiento</p>
+                    <h2>Conoce los productos</h2>
+                </div>
+
+                <div class="gu-video-caja">
+                    <!-- Etiqueta video de HTML5, sin reproductores de terceros -->
+                    <video id="gu-video" class="gu-video" controls preload="metadata"
+                        poster="assets/img/soothing-barrier-serum.png">
+                        <source src="assets/video/glowup-1.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproduccion de video HTML5.
+                    </video>
+                    <p class="gu-video-pie">Presentacion de productos Glow Up.</p>
+                </div>
+
             </div>
         </section>
+        <!-- FIN Video en HTML5 -->
+
+
+        <!-- INICIO Galeria de imagenes -->
+        <section class="gu-section gu-bg-light">
+            <div class="container">
+
+                <div class="gu-section-header">
+                    <p>Nuestros productos</p>
+                    <h2>Galeria de imagenes</h2>
+                </div>
+
+                <!-- Filtros por categoria -->
+                <div class="gu-galeria-filtros">
+                    <button type="button" class="gu-galeria-filtro activo" data-categoria="todas">Todas</button>
+                    <button type="button" class="gu-galeria-filtro" data-categoria="rutina">Rutina diaria</button>
+                    <button type="button" class="gu-galeria-filtro" data-categoria="serums">Serums</button>
+                    <button type="button" class="gu-galeria-filtro" data-categoria="tratamientos">Tratamientos</button>
+                    <button type="button" class="gu-galeria-filtro" data-categoria="cabello">Cabello</button>
+                </div>
+
+                <p id="gu-galeria-contador" class="gu-contador">Cargando...</p>
+
+                <div id="gu-galeria-grid" class="row gu-galeria-grid">
+                    <p class="text-center w-100 py-4">Cargando galeria...</p>
+                </div>
+
+            </div>
+        </section>
+        <!-- FIN Galeria de imagenes -->
+
+
+        <!-- INICIO Visor de imagen ampliada -->
+        <div class="modal fade" id="gu-visor" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h2 id="gu-visor-titulo" class="gu-visor-titulo"></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+
+                    <div class="modal-body text-center">
+                        <img id="gu-visor-img" src="" alt="" class="img-fluid gu-visor-img">
+                        <p id="gu-visor-epigrafe" class="gu-visor-epigrafe"></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- FIN Visor de imagen ampliada -->
+
     </main>
-    <!-- FIN Contenido de la página -->
+    <!-- FIN Contenido de la pagina -->
 
     <!-- INICIO Barra de redes sociales y WhatsApp -->
     <section id="gu-social">

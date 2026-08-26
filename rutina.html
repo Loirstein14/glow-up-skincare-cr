@@ -106,15 +106,42 @@
     </header>
     <!-- FIN Encabezado de la página -->
 
-    <!-- INICIO Contenido de la página -->
+    <!-- INICIO Contenido de la pagina -->
     <main>
+
         <section class="gu-section">
             <div class="container">
-                <p class="text-center">Contenido pendiente de desarrollar.</p>
+
+                <div class="gu-rutina-intro">
+                    <p>Una rutina de skincare no necesita quince productos. Necesita los pasos
+                        correctos, en el orden correcto, y constancia. Estos son los cinco pasos
+                        base y que producto usar en cada uno.</p>
+                </div>
+
+                <div class="gu-rutina-controles">
+                    <button type="button" id="gu-rutina-abrir" class="gu-btn-outline">Abrir todos</button>
+                    <button type="button" id="gu-rutina-cerrar" class="gu-btn-outline">Cerrar todos</button>
+                </div>
+
+                <div id="gu-rutina-lista" class="gu-rutina-lista">
+                    <p class="text-center py-4">Cargando la rutina...</p>
+                </div>
+
             </div>
         </section>
+
+        <!-- INICIO Llamado a la accion -->
+        <section id="gu-cta">
+            <div class="container">
+                <h2>No sabes por donde empezar?</h2>
+                <p>Contanos como es tu piel y te armamos una rutina a tu medida, sin costo.</p>
+                <a href="#" class="gu-btn-cta gu-link-whatsapp" target="_blank">Pedir asesoria</a>
+            </div>
+        </section>
+        <!-- FIN Llamado a la accion -->
+
     </main>
-    <!-- FIN Contenido de la página -->
+    <!-- FIN Contenido de la pagina -->
 
     <!-- INICIO Barra de redes sociales y WhatsApp -->
     <section id="gu-social">
@@ -201,6 +228,7 @@
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/rutina.js"></script>
     <!-- FIN Scripts -->
 
 </body>

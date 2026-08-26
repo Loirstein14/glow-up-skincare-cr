@@ -106,15 +106,104 @@
     </header>
     <!-- FIN Encabezado de la página -->
 
-    <!-- INICIO Contenido de la página -->
+    <!-- INICIO Contenido de la pagina -->
     <main>
+
         <section class="gu-section">
             <div class="container">
-                <p class="text-center">Contenido pendiente de desarrollar.</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+
+                        <div class="gu-texto">
+
+                            <p class="gu-texto-antetitulo">Sobre este proyecto</p>
+                            <h2>Que es este sitio</h2>
+
+                            <p>Este sitio web fue desarrollado como proyecto programado del curso
+                                <strong>ISW-512 Diseno de Aplicaciones Web</strong> de la carrera
+                                Ingenieria del Software de la Universidad Tecnica Nacional, bajo la
+                                guia del profesor Mit. Sergio Gonzalez Salazar.</p>
+
+                            <p>El objetivo del proyecto era construir y publicar un sitio real que
+                                resolviera una necesidad concreta de un emprendimiento. Glow Up es
+                                un negocio de skin care y hair care que hasta ahora vendia unicamente
+                                por redes sociales y no contaba con presencia web propia.</p>
+
+                            <h3>Tecnologias utilizadas</h3>
+
+                            <div class="row gu-tec-grid">
+                                <div class="col-6 col-md-4">
+                                    <div class="gu-tec"><i class="bi bi-filetype-html"></i>
+                                        <span>HTML5</span></div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="gu-tec"><i class="bi bi-filetype-css"></i>
+                                        <span>CSS3</span></div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="gu-tec"><i class="bi bi-filetype-js"></i>
+                                        <span>JavaScript</span></div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="gu-tec"><i class="bi bi-bootstrap"></i>
+                                        <span>Bootstrap 5</span></div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="gu-tec"><i class="bi bi-braces"></i>
+                                        <span>jQuery</span></div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="gu-tec"><i class="bi bi-github"></i>
+                                        <span>GitHub Pages</span></div>
+                                </div>
+                            </div>
+
+                            <h3>Como esta construido</h3>
+
+                            <p>El sitio se desarrollo desde cero, sin partir de ninguna plantilla
+                                comercial. Todo el maquetado utiliza Bootstrap 5 bajo la modalidad
+                                <strong>Mobile First</strong>: los estilos base estan pensados para
+                                pantallas pequenas y las consultas de medios amplian el diseno hacia
+                                tablet y escritorio.</p>
+
+                            <p>El catalogo de productos, la galeria de imagenes y los pasos de la
+                                rutina no estan escritos dentro del HTML. Se publican como archivos
+                                JSON dentro del mismo sitio y se consumen como un API Rest mediante
+                                jQuery, de forma que el contenido se carga de manera dinamica y
+                                actualizarlo no requiere tocar el codigo de las paginas.</p>
+
+                            <p>El sitio tambien consume un <strong>API Rest externo</strong>:
+                                OpenWeatherMap. En la pagina de inicio se consulta el clima actual y,
+                                segun la temperatura y la humedad, se sugiere que tipo de textura y
+                                cuidado conviene ese dia. La pagina de ubicacion utiliza la
+                                <strong>API de Google Maps</strong> junto con la geolocalizacion del
+                                navegador para mostrar el punto de entrega y trazar la ruta.</p>
+
+                            <h3>Creditos y fuentes</h3>
+
+                            <ul class="gu-lista-fuentes">
+                                <li><strong>Bootstrap 5</strong> &mdash; getbootstrap.com</li>
+                                <li><strong>Bootstrap Icons</strong> &mdash; icons.getbootstrap.com</li>
+                                <li><strong>jQuery</strong> &mdash; jquery.com</li>
+                                <li><strong>Google Fonts</strong> &mdash; Playfair Display y Poppins</li>
+                                <li><strong>OpenWeatherMap API</strong> &mdash; openweathermap.org</li>
+                                <li><strong>Google Maps Platform</strong> &mdash; mapsplatform.google.com</li>
+                                <li><strong>Imagenes de producto y logo</strong> &mdash; propiedad de Glow Up,
+                                    cedidas para este proyecto</li>
+                            </ul>
+
+                            <p class="gu-nota">No se utilizo ninguna plantilla de terceros. El diseno,
+                                la hoja de estilos y todo el codigo JavaScript son de elaboracion propia.</p>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
+
     </main>
-    <!-- FIN Contenido de la página -->
+    <!-- FIN Contenido de la pagina -->
 
     <!-- INICIO Barra de redes sociales y WhatsApp -->
     <section id="gu-social">

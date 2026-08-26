@@ -1,0 +1,49 @@
+{
+    "rutina": [
+        {
+            "paso": 1,
+            "nombre": "Limpieza",
+            "momento": "Manana y noche",
+            "icono": "bi-droplet",
+            "descripcion": "Retira el exceso de grasa, la suciedad del dia y los restos de maquillaje o protector solar. Es el paso que permite que todo lo demas funcione.",
+            "consejo": "En la noche, si usaste maquillaje o protector solar, hace doble limpieza: primero un limpiador en aceite y despues el jabon.",
+            "productos": ["CeraVe Hydrating Cleanser", "CeraVe Acne Control Cleanser", "CeraVe Jabon Salicilico"]
+        },
+        {
+            "paso": 2,
+            "nombre": "Exfoliacion",
+            "momento": "Una a dos veces por semana",
+            "icono": "bi-stars",
+            "descripcion": "Elimina las celulas muertas que opacan la piel y tapan los poros. Mejora la textura y ayuda a que los serums penetren mejor.",
+            "consejo": "No lo hagas todos los dias. Sobreexfoliar debilita la barrera de la piel y provoca el efecto contrario.",
+            "productos": ["Acido Glicolico 7%", "AHA 30% + BHA 2% Peeling Solution", "Acido Lactico 10% + HA"]
+        },
+        {
+            "paso": 3,
+            "nombre": "Tratamiento",
+            "momento": "Segun tu necesidad",
+            "icono": "bi-eyedropper",
+            "descripcion": "Aca entran los serums con activos concentrados. Se elige segun lo que quieras trabajar: manchas, acne, lineas de expresion o falta de luminosidad.",
+            "consejo": "Empeza con un solo activo nuevo a la vez. Asi sabes que te funciona y que te irrita.",
+            "productos": ["Vitamina C 12%", "Niacinamida 10% + Zinc 1%", "Alpha Arbutin 2% + HA", "Retinol 0.5% in Squalane"]
+        },
+        {
+            "paso": 4,
+            "nombre": "Hidratacion",
+            "momento": "Manana y noche",
+            "icono": "bi-moisture",
+            "descripcion": "Sella todo lo anterior y mantiene la barrera cutanea en buen estado. Incluso la piel grasa necesita hidratacion.",
+            "consejo": "Si tenes piel grasa, elegi texturas en gel a base de agua. Si es seca, buscas cremas mas ricas con ceramidas.",
+            "productos": ["Omega Water Cream", "Natural Moisturizing Factors + HA", "Soothing & Barrier Support Serum"]
+        },
+        {
+            "paso": 5,
+            "nombre": "Proteccion solar",
+            "momento": "Todas las mananas",
+            "icono": "bi-sun",
+            "descripcion": "Es el paso mas importante de todos. Sin protector solar, el resto de la rutina pierde gran parte de su efecto y la piel envejece mas rapido.",
+            "consejo": "En Costa Rica el indice UV es alto todo el ano, incluso con nubes. Reaplica cada dos o tres horas si estas al aire libre.",
+            "productos": ["Bloqueador Solar + Hidratante"]
+        }
+    ]
+}

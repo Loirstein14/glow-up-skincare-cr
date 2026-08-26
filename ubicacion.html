@@ -106,15 +106,104 @@
     </header>
     <!-- FIN Encabezado de la página -->
 
-    <!-- INICIO Contenido de la página -->
+    <!-- INICIO Contenido de la pagina -->
     <main>
+
         <section class="gu-section">
             <div class="container">
-                <p class="text-center">Contenido pendiente de desarrollar.</p>
+
+                <div class="row">
+
+                    <!-- INICIO Panel lateral con los datos y controles -->
+                    <div class="col-lg-4">
+
+                        <div class="gu-mapa-panel">
+
+                            <h2>Punto de entrega</h2>
+                            <p class="gu-mapa-intro">Coordinamos entregas y encuentros en este punto.
+                                Activa tu ubicacion y te mostramos como llegar.</p>
+
+                            <ul class="gu-contacto-lista">
+                                <li>
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>Direccion</span>
+                                    <span class="gu-contacto-dato">San Jose, Costa Rica</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-clock"></i>
+                                    <span>Horario</span>
+                                    <span class="gu-contacto-dato">Lunes a sabado, 9:00 a 18:00</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-whatsapp"></i>
+                                    <span>Coordinar</span>
+                                    <a href="#" class="gu-link-whatsapp" target="_blank">Escribinos</a>
+                                </li>
+                            </ul>
+
+                            <!-- Boton que dispara la geolocalizacion -->
+                            <button type="button" id="gu-btn-ubicarme" class="gu-btn w-100 mt-3">
+                                <i class="bi bi-crosshair"></i> Ver como llegar
+                            </button>
+
+                            <!-- Medio de transporte -->
+                            <div class="gu-modo-grupo">
+                                <button type="button" class="gu-modo-btn activo" data-modo="DRIVING">
+                                    <i class="bi bi-car-front"></i> Carro
+                                </button>
+                                <button type="button" class="gu-modo-btn" data-modo="WALKING">
+                                    <i class="bi bi-person-walking"></i> A pie
+                                </button>
+                                <button type="button" class="gu-modo-btn" data-modo="TRANSIT">
+                                    <i class="bi bi-bus-front"></i> Bus
+                                </button>
+                            </div>
+
+                            <!-- Aviso de estado -->
+                            <div id="gu-mapa-aviso" class="d-none"></div>
+
+                            <!-- Resultado del calculo de la ruta -->
+                            <div id="gu-ruta-datos" class="gu-ruta-datos d-none">
+                                <div class="gu-ruta-fila">
+                                    <span class="gu-ruta-etiqueta">Distancia</span>
+                                    <strong id="gu-ruta-distancia"></strong>
+                                </div>
+                                <div class="gu-ruta-fila">
+                                    <span class="gu-ruta-etiqueta">Tiempo estimado</span>
+                                    <strong id="gu-ruta-tiempo"></strong>
+                                </div>
+                                <div class="gu-ruta-fila">
+                                    <span class="gu-ruta-etiqueta">Saliendo de</span>
+                                    <strong id="gu-ruta-origen"></strong>
+                                </div>
+                            </div>
+
+                            <a href="#" id="gu-abrir-maps" class="gu-mapa-enlace" target="_blank">
+                                Abrir en Google Maps <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <!-- FIN Panel lateral -->
+
+
+                    <!-- INICIO Mapa -->
+                    <div class="col-lg-8 mt-4 mt-lg-0">
+                        <div class="gu-mapa-caja">
+                            <p id="gu-mapa-cargando" class="gu-mapa-cargando">Cargando el mapa...</p>
+                            <div id="gu-mapa"></div>
+                        </div>
+                    </div>
+                    <!-- FIN Mapa -->
+
+                </div>
+
             </div>
         </section>
+
     </main>
-    <!-- FIN Contenido de la página -->
+    <!-- FIN Contenido de la pagina -->
 
     <!-- INICIO Barra de redes sociales y WhatsApp -->
     <section id="gu-social">
