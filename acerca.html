@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca del Sitio | Glow Up</title>
-    <meta name="description" content="Glow Up, tienda de skin care y hair care en Costa Rica.">
+    <meta name="description" content="Cómo está construido el sitio de Glow Up: tecnologías, arquitectura y créditos.">
     <meta name="keywords" content="skincare, haircare, cuidado de la piel, Costa Rica">
 
     <!-- Favicon -->
@@ -78,7 +78,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="nosotros.html">Nuestra historia</a></li>
                             <li><a class="dropdown-item" href="acerca.html">Acerca del sitio</a></li>
-                            <li><a class="dropdown-item" href="autor.html">Autor</a></li>
+                            <li><a class="dropdown-item" href="autor.html">Desarrollador</a></li>
                         </ul>
                     </li>
 
@@ -101,12 +101,12 @@
     <header id="gu-page-header">
         <div class="container">
             <h1>Acerca del Sitio</h1>
-            <p>Sobre este proyecto</p>
+            <p>Cómo está construido</p>
         </div>
     </header>
     <!-- FIN Encabezado de la página -->
 
-    <!-- INICIO Contenido de la pagina -->
+    <!-- INICIO Contenido de la página -->
     <main>
 
         <section class="gu-section">
@@ -116,20 +116,20 @@
 
                         <div class="gu-texto">
 
-                            <p class="gu-texto-antetitulo">Sobre este proyecto</p>
-                            <h2>Que es este sitio</h2>
+                            <p class="gu-texto-antetitulo">El punto de partida</p>
+                            <h2>Por qué existe este sitio</h2>
 
-                            <p>Este sitio web fue desarrollado como proyecto programado del curso
-                                <strong>ISW-512 Diseno de Aplicaciones Web</strong> de la carrera
-                                Ingenieria del Software de la Universidad Tecnica Nacional, bajo la
-                                guia del profesor Mit. Sergio Gonzalez Salazar.</p>
+                            <p>Glow Up vendía únicamente por redes sociales. Los productos estaban
+                                repartidos entre publicaciones de Instagram y el catálogo de WhatsApp,
+                                y cada consulta de precio se respondía a mano por mensaje directo.
+                                Funcionaba, pero no escalaba.</p>
 
-                            <p>El objetivo del proyecto era construir y publicar un sitio real que
-                                resolviera una necesidad concreta de un emprendimiento. Glow Up es
-                                un negocio de skin care y hair care que hasta ahora vendia unicamente
-                                por redes sociales y no contaba con presencia web propia.</p>
+                            <p>Este sitio resuelve eso: un lugar donde ver todo el catálogo con
+                                precios, entender qué producto sirve para qué, y pasar al WhatsApp
+                                del negocio con la consulta ya lista. No reemplaza las redes, las
+                                complementa.</p>
 
-                            <h3>Tecnologias utilizadas</h3>
+                            <h3>Tecnologías utilizadas</h3>
 
                             <div class="row gu-tec-grid">
                                 <div class="col-6 col-md-4">
@@ -158,42 +158,46 @@
                                 </div>
                             </div>
 
-                            <h3>Como esta construido</h3>
+                            <h3>Cómo está construido</h3>
 
-                            <p>El sitio se desarrollo desde cero, sin partir de ninguna plantilla
-                                comercial. Todo el maquetado utiliza Bootstrap 5 bajo la modalidad
-                                <strong>Mobile First</strong>: los estilos base estan pensados para
-                                pantallas pequenas y las consultas de medios amplian el diseno hacia
-                                tablet y escritorio.</p>
+                            <p>El sitio se desarrolló desde cero, sin partir de ninguna plantilla.
+                                Todo el maquetado usa Bootstrap 5 bajo la modalidad
+                                <strong>Mobile First</strong>: los estilos base están pensados para
+                                pantallas pequeñas y se amplían hacia tablet y escritorio, no al
+                                revés. La mayoría de las visitas llegan desde el celular, así que
+                                tiene sentido diseñar para ahí primero.</p>
 
-                            <p>El catalogo de productos, la galeria de imagenes y los pasos de la
-                                rutina no estan escritos dentro del HTML. Se publican como archivos
-                                JSON dentro del mismo sitio y se consumen como un API Rest mediante
-                                jQuery, de forma que el contenido se carga de manera dinamica y
-                                actualizarlo no requiere tocar el codigo de las paginas.</p>
+                            <p>El catálogo de productos, la galería de imágenes y los pasos de la
+                                rutina no están escritos dentro del HTML. Viven en archivos
+                                <strong>JSON</strong> que el sitio consume como un API REST, de forma
+                                que el contenido se carga de manera dinámica. La ventaja práctica es
+                                concreta: cambiar un precio o agregar un producto se hace editando un
+                                archivo de datos, sin tocar el código de ninguna página.</p>
 
-                            <p>El sitio tambien consume un <strong>API Rest externo</strong>:
-                                OpenWeatherMap. En la pagina de inicio se consulta el clima actual y,
-                                segun la temperatura y la humedad, se sugiere que tipo de textura y
-                                cuidado conviene ese dia. La pagina de ubicacion utiliza la
-                                <strong>API de Google Maps</strong> junto con la geolocalizacion del
-                                navegador para mostrar el punto de entrega y trazar la ruta.</p>
+                            <p>La página de inicio consulta el clima en tiempo real y, según la
+                                temperatura y la humedad del día, sugiere qué tipo de textura
+                                conviene usar. En un país con clima tropical eso no es un adorno:
+                                cambia de verdad lo que le sirve a la piel. La página de ubicación
+                                usa el mapa y la geolocalización del navegador para trazar la ruta
+                                hasta el punto de entrega, con opción de carro, a pie o autobús.</p>
 
-                            <h3>Creditos y fuentes</h3>
+                            <h3>Créditos y fuentes</h3>
 
                             <ul class="gu-lista-fuentes">
                                 <li><strong>Bootstrap 5</strong> &mdash; getbootstrap.com</li>
                                 <li><strong>Bootstrap Icons</strong> &mdash; icons.getbootstrap.com</li>
                                 <li><strong>jQuery</strong> &mdash; jquery.com</li>
                                 <li><strong>Google Fonts</strong> &mdash; Playfair Display y Poppins</li>
-                                <li><strong>OpenWeatherMap API</strong> &mdash; openweathermap.org</li>
+                                <li><strong>OpenWeatherMap</strong> &mdash; openweathermap.org</li>
                                 <li><strong>Google Maps Platform</strong> &mdash; mapsplatform.google.com</li>
-                                <li><strong>Imagenes de producto y logo</strong> &mdash; propiedad de Glow Up,
-                                    cedidas para este proyecto</li>
+                                <li><strong>Imágenes de producto y logotipo</strong> &mdash; propiedad de Glow Up</li>
                             </ul>
 
-                            <p class="gu-nota">No se utilizo ninguna plantilla de terceros. El diseno,
-                                la hoja de estilos y todo el codigo JavaScript son de elaboracion propia.</p>
+                            <p class="gu-nota">Diseño y desarrollo por
+                                <a href="autor.html">Luis Solís Durán</a>. Código fuente disponible en
+                                <a href="https://github.com/Loirstein14/glow-up-skincare-cr"
+                                    target="_blank">GitHub</a>.
+                            </p>
 
                         </div>
 
@@ -203,7 +207,7 @@
         </section>
 
     </main>
-    <!-- FIN Contenido de la pagina -->
+    <!-- FIN Contenido de la página -->
 
     <!-- INICIO Barra de redes sociales y WhatsApp -->
     <section id="gu-social">
@@ -259,7 +263,7 @@
                     <h4>Información</h4>
                     <ul>
                         <li><a href="acerca.html">Acerca del sitio</a></li>
-                        <li><a href="autor.html">Autor</a></li>
+                        <li><a href="autor.html">Desarrollador</a></li>
                         <li><a href="ubicacion.html">Ubicación</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>

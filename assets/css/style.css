@@ -2117,3 +2117,147 @@ a:hover {
 }
 
 /* FIN Ajuste para varios videos */
+
+/* ============================================================
+   ESTILOS DE LA PAGINA DEL DESARROLLADOR
+   Agregar al final de assets/css/style.css
+   ============================================================ */
+
+/* INICIO Tarjeta de perfil */
+.gu-perfil {
+    background-color: var(--gu-light);
+    border-radius: 12px;
+    padding: 26px 22px;
+}
+
+.gu-perfil-rol {
+    font-size: 15px;
+    color: var(--gu-secondary);
+    margin-bottom: 14px;
+}
+
+.gu-perfil-bio {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.gu-perfil-enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.gu-perfil-enlaces .gu-btn,
+.gu-perfil-enlaces .gu-btn-outline {
+    padding: 9px 20px;
+    font-size: 13px;
+}
+
+/* FIN Tarjeta de perfil */
+
+
+/* INICIO Encabezado de seccion alineado a la izquierda */
+.gu-section-header.text-start {
+    text-align: left;
+    margin-bottom: 26px;
+}
+
+/* FIN Encabezado alineado */
+
+
+/* INICIO Bloques de tecnologias */
+.gu-stack {
+    background-color: var(--gu-white);
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    padding: 22px 20px;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.gu-stack h3 {
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.gu-stack h3 i {
+    color: var(--gu-dark);
+    margin-right: 6px;
+}
+
+.gu-stack ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gu-stack li {
+    font-size: 14px;
+    padding: 5px 0 5px 16px;
+    position: relative;
+}
+
+.gu-stack li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 6px;
+    height: 1px;
+    background-color: var(--gu-secondary);
+}
+
+/* FIN Bloques de tecnologias */
+
+
+/* INICIO Caso de estudio */
+.gu-caso {
+    border-left: 2px solid var(--gu-dark);
+    padding: 4px 0 4px 18px;
+    height: 100%;
+    margin-bottom: 24px;
+}
+
+.gu-caso-num {
+    font-family: var(--gu-font-titulo);
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--gu-secondary);
+    display: block;
+    margin-bottom: 6px;
+}
+
+.gu-caso h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.gu-caso p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.gu-caso-subtitulo {
+    font-size: 21px;
+    margin-top: 34px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+/* FIN Caso de estudio */
+
+
+/* INICIO Media queries del desarrollador */
+@media (min-width: 768px) {
+
+    .gu-perfil {
+        padding: 34px 32px;
+    }
+
+    .gu-perfil-rol {
+        font-size: 16px;
+    }
+}
+
+/* FIN Media queries del desarrollador */
